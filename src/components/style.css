@@ -1,0 +1,22 @@
+.card-body::-webkit-scrollbar{
+    display: none;
+}
+.card-body{
+    height: 282px;
+    margin: 37px;
+    
+    overflow: auto;
+    color:white;
+    
+
+}
+.card{
+    margin: 9px;
+    margin-bottom: 63px;
+    background-color: #516087;
+    box-shadow: 5px 0px 2px #090f1f
+    
+}
+.navbar{
+    background:transparent;
+}

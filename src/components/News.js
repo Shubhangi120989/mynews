@@ -3,7 +3,7 @@ import NewsItem from './NewsItem'
 import Loadinggif from './Loadinggif'
 import PropTypes from 'prop-types'
 import InfiniteScroll from "react-infinite-scroll-component";
-import LoadingBar from 'react-top-loading-bar'
+
 
 export class News extends Component {
   static defaultProps={
@@ -167,14 +167,14 @@ export class News extends Component {
       
       this.setState({loading:false,articles:this.state.articles.concat(parsedData.articles),totalResults:parsedData.totalResults});
 
-      },1500)
+      },500)
       
     }
   render() {
     return (
       <>
       
-        <h2 style={{textAlign:'center',margin:'30px'}}>NewsNinja- Top {this.capitalise(this.props.category)} Headlines</h2>
+        <h1 style={{textAlign:'center',margin:'30px', color:"#516087",fontWeight:"1000",opacity:"1000"}}>NewsNinja- Top {this.capitalise(this.props.category)} Headlines</h1>
         <div className="container">
         {this.state.loading&&<Loadinggif/>}
         </div>
@@ -214,7 +214,7 @@ loader={<Loadinggif/>}>
           if(element.title){
           return <div className="col-md-4" key={element.url}> {/*unique key should be given to the div that is being returned*/}
           
-          <NewsItem  title={element.title} description={element.description?element.description.slice(0,f)+"...":""} imageurl={element.urlToImage?element.urlToImage:"https://cdn.pixabay.com/photo/2017/06/10/07/22/news-2389226_1280.png"} newsUrl={element.url} author={element.author} date={element.publishedAt} source={element.source.name}/>
+          <NewsItem  title={element.title} description={element.description?element.description:""} imageurl={element.urlToImage?element.urlToImage:"https://cdn.pixabay.com/photo/2017/06/10/07/22/news-2389226_1280.png"} newsUrl={element.url} author={element.author} date={element.publishedAt} source={element.source.name}/>
 
           </div>
           }

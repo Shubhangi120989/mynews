@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import './style.css'
 
 export class NewsItem extends Component {
   
@@ -7,7 +8,7 @@ export class NewsItem extends Component {
     let d=new Date(date).toGMTString
     return (
       <div style={{display:'inline',height: "529px"}}>
-        <div className="card" >
+        <div className="card">
         <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style={{zIndex:'1',marginLeft: "-40px"}}>
           {source}
   

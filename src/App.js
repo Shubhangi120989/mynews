@@ -14,7 +14,7 @@ export class App extends Component {
   }
   render() {
     return (
-      <BrowserRouter>
+      <BrowserRouter defaultRoute="/">
         <Navbar />
         <LoadingBar
         color='#f11946'
@@ -22,8 +22,10 @@ export class App extends Component {
         progress={this.state.progress}
         
       />
+      
         <Routes>
-          <Route exact path="/" element ={<News setProgress={this.setProgress} key="general"/>}/>
+          <Route exact path="/newsNinja" element ={<News setProgress={this.setProgress} key="general1"/>}/>
+          <Route exact path="/" element ={<News setProgress={this.setProgress} key="general1"/>}/>
           <Route exact path="/entertainment" element={<News setProgress={this.setProgress} key="entertainment" category="entertainment"/>}/>
           <Route exact path="/business" element={<News setProgress={this.setProgress} key="business" category="business"/>}/>
           <Route exact path="/general" element={<News setProgress={this.setProgress} key="general" category="general"/>}/>
