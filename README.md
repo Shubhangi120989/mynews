@@ -1,3 +1,5 @@
+<h1>See the App Demo</h1>
+<a href="https://drive.google.com/file/d/1jIeov45F57Wjs3Mm6PZyh2Z-ZsV0bTsp/view?usp=sharing" target="_blank" rel="noopener">NewsNinjaApp</a>
 <h1>The React News Portal</h1>
     <p>The React News Portal is built using the React JavaScript library, making it a powerful and responsive platform for delivering news content. It leverages the NewsAPI.org API to fetch real-time news updates in different categories.</p>
 
